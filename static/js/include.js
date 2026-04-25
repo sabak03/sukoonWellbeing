@@ -9,5 +9,13 @@ async function loadPartial(id, file) {
   element.innerHTML = html;
 }
 
-loadPartial("header", "/partials/header.html");
-loadPartial("footer", "/partials/footer.html");
+async function loadLayout() {
+  await loadPartial("header", "/partials/header.html");
+  await loadPartial("footer", "/partials/footer.html");
+
+  if (typeof initMenu === "function") {
+    initMenu();
+  }
+}
+
+loadLayout();
