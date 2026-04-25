@@ -3,42 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sukoon Community Wellbeing</title>
+  <title>Sukoon Community Wellbeing CIC</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="/static/css/stiles.css" />
 </head>
 
 <body>
+
   <header class="site-header">
-    <div class="container" style="padding-top:.75rem; padding-bottom:.75rem;">
+    <div class="container nav-wrap">
       <div class="flex items-center justify-between gap-4">
-        <a href="/" class="brand" aria-label="LOK Community home">
+
+        <a href="/" class="brand" aria-label="Sukoon home">
           <img
-            src="/static/images/lok_long.png"
-            alt="LOK Community logo"
+            src="/static/images/longSukoon.png"
+            alt="Sukoon Community Wellbeing CIC logo"
             class="site-logo"
           />
         </a>
 
-        <!-- Desktop nav -->
-        <nav class="hidden md:flex items-center gap-6 text-sm" style="color:var(--muted)">
-          <a class="link hover:underline" href="/mission/">Our Mission</a>
-          <a class="link hover:underline" href="/upcoming/">Upcoming</a>
-          <a class="link hover:underline" href="/calendar/">Calendar</a>
-          <a class="link hover:underline" href="/volunteer/">Volunteer</a>
-          <a class="link hover:underline" href="/contact/">Contact Us</a>
-          <a class="btn btn-ghostP btn-pill text-sm" style="border-width: 2px;color: var(--pink); padding: .55rem 1.3rem;" 
-            onpointerenter="this.setAttribute('style', 'border-width: 2px;color: white; padding: .55rem 1.3rem;')" 
-            onpointerleave="this.setAttribute('style', 'border-width: 2px;color: var(--pink); padding: .55rem 1.3rem;')" 
-            href="/donate/">Donate</a>
-          <a class="btn btn-pill text-sm btn-whatsapp" href="/whatsapp/">WhatsApp</a>
+        <nav class="hidden md:flex items-center gap-6 text-sm nav-links">
+          <a class="link" href="/">Home</a>
+          <a class="link" href="/about/">About Us</a>
+          <a class="link" href="/services/">Services</a>
+          <a class="link" href="/get-involved/">Get Involved</a>
+          <a class="link" href="/impact/">Impact</a>
+          <a class="link" href="/contact/">Contact</a>
+
+          <a class="btn btn-ghost btn-pill text-sm" href="/support/">Support Us</a>
+          <a class="btn btn-pill btn-whatsapp text-sm" href="/whatsapp/">WhatsApp</a>
         </nav>
 
-        <!-- Mobile nav -->
         <button
           id="menuBtn"
           class="md:hidden px-3 py-2 rounded-lg border"
@@ -46,94 +47,202 @@
           aria-label="Open menu"
           aria-expanded="false"
         >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6"  x2="21" y2="6"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
         </button>
+
       </div>
     </div>
 
-    <div class="divider-gold"></div>
+    <div class="divider-soft"></div>
 
-    <!-- Mobile drawer -->
-    <div id="mobileNav" class="md:hidden hidden border-t" style="border-color:var(--line)">
-      <div class="container" style="padding-top:.75rem; padding-bottom:.75rem;">
-        <div class="grid gap-2 text-sm" style="color:var(--muted)">
-          <a class="py-2 link" href="/mission/">Our Mission</a>
-          <a class="py-2 link" href="/upcoming/">Upcoming</a>
-          <a class="py-2 link" href="/calendar/">Calendar</a>
-          <a class="py-2 link" href="/volunteer/">Volunteer</a>
-          <a class="py-2 link" href="/contact/">Contact Us</a>
-          <a class="btn btn-ghostP btn-pill text-sm" style="border-width: 2px;color: var(--pink);" 
-            onpointerenter="this.setAttribute('style', 'border-width: 2px;color: white;')" 
-            onpointerleave="this.setAttribute('style', 'border-width: 2px;color: var(--pink);')" 
-            href="/donate/">Donate</a>
-          <a class="btn w-full btn-whatsapp" href="/whatsapp/">Join WhatsApp</a>
+    <div id="mobileNav" class="md:hidden hidden mobile-drawer">
+      <div class="container py-4">
+        <div class="grid gap-3 text-sm">
+          <a class="py-2 link" href="/">Home</a>
+          <a class="py-2 link" href="/about/">About Us</a>
+          <a class="py-2 link" href="/services/">Services</a>
+          <a class="py-2 link" href="/get-involved/">Get Involved</a>
+          <a class="py-2 link" href="/impact/">Impact</a>
+          <a class="py-2 link" href="/contact/">Contact</a>
+          <a class="btn btn-ghost btn-pill text-sm" href="/support/">Support Us</a>
+          <a class="btn btn-pill btn-whatsapp text-sm" href="/whatsapp/">Join WhatsApp</a>
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Heading -->
-    <section class="hero">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-overlay" aria-hidden="true"></div>
 
-      <div class="container hero-inner">
-        <div class="grid grid-2 items-center" style="gap:2rem;">
-          <div>
-            <div class="flex flex-wrap gap-2">
-              <span class="badge badge-pink"></span>
-              <span class="badge"></span>
-            </div>
+    <section class="hero-section">
+      <div class="container hero-grid">
 
-            <h1 class="headline text-4xl md:text-6xl font-extrabold leading-tight mt-4">
-              Sukoon Community Wellbieng CIC
-            </h1>
+        <div class="hero-content reveal">
+          <span class="eyebrow">Community • Wellbeing • Family</span>
 
-            <p class="mt-4 text-lg muted max-w-xl">
-              
-            </p>
+          <h1>Sukoon Community Wellbeing CIC</h1>
 
+          <p class="hero-subtitle">
+            Supporting women and families through affordable wellbeing activities,
+            safe community spaces, and meaningful connection.
+          </p>
 
-         
-      
+          <div class="hero-buttons">
+            <a href="/services/" class="btn btn-primary btn-pill">Explore Our Services</a>
+            <a href="/get-involved/" class="btn btn-light btn-pill">Get Involved</a>
+          </div>
+        </div>
 
-        <div>
-          <div class="font-semibold" style="color:var(--ink)">Contact</div>
-          <p class="mt-2">
-            Email: <a class="link" href="mailto:lokinstitute@gmail.com">info@sukoonwellbeing.org.uk</a><br/>
-            Phone: <a class="link" href="tel:+44123456789">+44 123456789</a>
+        <div class="hero-card reveal">
+          <p class="small-title">Our purpose</p>
+          <h2>Creating calm, connection and confidence.</h2>
+          <p>
+            Sukoon helps families feel less isolated by bringing people together
+            through swimming, cooking, social activities and supportive community events.
           </p>
         </div>
-      </div>
-    </div>
 
-    <div class="divider-gold"></div>
-    <div class="container" style="padding-top:1rem; padding-bottom:1rem;">
-      <div class="text-xs muted">© <span id="year"></span> Sukoon Community Wellbeing CIC. All rights reserved.</div>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">Our Services</span>
+          <h2>Activities that bring families together</h2>
+          <p>
+            Our sessions are designed to be warm, welcoming and accessible for women,
+            children and families in the community.
+          </p>
+        </div>
+
+        <div class="service-cards">
+
+          <a href="/services/swimming/" class="service-card reveal">
+            <div class="service-icon">🏊‍♀️</div>
+            <h3>Swimming Sessions</h3>
+            <p>
+              Affordable women and family swimming sessions that support confidence,
+              movement and wellbeing.
+            </p>
+            <span>Learn more →</span>
+          </a>
+
+          <a href="/services/cooking/" class="service-card reveal">
+            <div class="service-icon">🍕</div>
+            <h3>Cooking Workshops</h3>
+            <p>
+              Simple savoury and sweet cooking sessions for mums and children to learn,
+              connect and enjoy food together.
+            </p>
+            <span>Learn more →</span>
+          </a>
+
+          <a href="/services/events/" class="service-card reveal">
+            <div class="service-icon">:)</div>
+            <h3>Community Events</h3>
+            <p>
+              Chai and chat, children’s activities, wellbeing days and family trips that
+              reduce isolation.
+            </p>
+            <span>Learn more →</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="why-section">
+      <div class="container why-box reveal">
+        <span class="eyebrow">Why Sukoon?</span>
+        <h2>A safe space for women and families to feel supported.</h2>
+        <p>
+          Sukoon Community Wellbeing CIC exists to make wellbeing activities more
+          accessible for families who may feel isolated, face financial barriers,
+          or need a welcoming space to connect with others. Through community-led
+          sessions, we aim to improve confidence, reduce loneliness and support
+          healthier family routines.
+        </p>
+      </div>
+    </section>
+
+    <section class="impact-section">
+      <div class="container impact-grid">
+
+        <div class="impact-text reveal">
+          <span class="eyebrow">Our Impact</span>
+          <h2>Small sessions. Real difference.</h2>
+          <p>
+            Every activity creates an opportunity for families to leave the house,
+            meet others, build confidence and feel part of the community.
+          </p>
+        </div>
+
+        <div class="impact-stats reveal">
+          <div>
+            <strong>15+</strong>
+            <span>families per session</span>
+          </div>
+          <div>
+            <strong>3</strong>
+            <span>main activity areas</span>
+          </div>
+          <div>
+            <strong>1</strong>
+            <span>welcoming community</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-box reveal">
+        <h2>Get involved with Sukoon</h2>
+        <p>
+          Join a session, volunteer your time, or support our work so we can continue
+          offering affordable activities for women and families.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="/services/" class="btn btn-primary btn-pill">Join</a>
+          <a href="/get-involved/" class="btn btn-light btn-pill">Volunteer</a>
+          <a href="/support/" class="btn btn-ghost btn-pill">Support</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Sukoon Community Wellbeing CIC</h3>
+        <p>Supporting women and families through wellbeing activities.</p>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>Email: info@sukoonwellbeing.org.uk</p>
+        <p>Phone: 07809 604872</p>
+      </div>
+
+      <div>
+        <h4>Follow</h4>
+        <p>
+          <a href="#">Instagram</a> ·
+          <a href="#">Facebook</a> ·
+          <a href="/whatsapp/">WhatsApp</a>
+        </p>
+      </div>
     </div>
   </footer>
 
-  <!-- Mobile sticky actions (kept) -->
-  <div class="mobile-cta md:hidden">
-    <div class="tray">
-      <a href="https://chat.whatsapp.com" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp</a>
-      <a href="/donate/" class="btn btn-primary">Donate</a>
-    </div>
-  </div>
-
-  <script src="/static/js/main.js"></script>
-
-  
+  <script src="/static/js/jarvis.js"></script>
 </body>
-
 </html>
-
-
-
-
-
