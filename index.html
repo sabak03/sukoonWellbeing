@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sukoon Community Wellbeing</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/stiles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container" style="padding-top:.75rem; padding-bottom:.75rem;">
+      <div class="flex items-center justify-between gap-4">
+        <a href="/" class="brand" aria-label="LOK Community home">
+          <img
+            src="/static/images/lok_long.png"
+            alt="LOK Community logo"
+            class="site-logo"
+          />
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-6 text-sm" style="color:var(--muted)">
+          <a class="link hover:underline" href="/mission/">Our Mission</a>
+          <a class="link hover:underline" href="/upcoming/">Upcoming</a>
+          <a class="link hover:underline" href="/calendar/">Calendar</a>
+          <a class="link hover:underline" href="/volunteer/">Volunteer</a>
+          <a class="link hover:underline" href="/contact/">Contact Us</a>
+          <a class="btn btn-ghostP btn-pill text-sm" style="border-width: 2px;color: var(--pink); padding: .55rem 1.3rem;" 
+            onpointerenter="this.setAttribute('style', 'border-width: 2px;color: white; padding: .55rem 1.3rem;')" 
+            onpointerleave="this.setAttribute('style', 'border-width: 2px;color: var(--pink); padding: .55rem 1.3rem;')" 
+            href="/donate/">Donate</a>
+          <a class="btn btn-pill text-sm btn-whatsapp" href="/whatsapp/">WhatsApp</a>
+        </nav>
+
+        <!-- Mobile nav -->
+        <button
+          id="menuBtn"
+          class="md:hidden px-3 py-2 rounded-lg border"
+          style="border-color:var(--line)"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6"  x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="divider-gold"></div>
+
+    <!-- Mobile drawer -->
+    <div id="mobileNav" class="md:hidden hidden border-t" style="border-color:var(--line)">
+      <div class="container" style="padding-top:.75rem; padding-bottom:.75rem;">
+        <div class="grid gap-2 text-sm" style="color:var(--muted)">
+          <a class="py-2 link" href="/mission/">Our Mission</a>
+          <a class="py-2 link" href="/upcoming/">Upcoming</a>
+          <a class="py-2 link" href="/calendar/">Calendar</a>
+          <a class="py-2 link" href="/volunteer/">Volunteer</a>
+          <a class="py-2 link" href="/contact/">Contact Us</a>
+          <a class="btn btn-ghostP btn-pill text-sm" style="border-width: 2px;color: var(--pink);" 
+            onpointerenter="this.setAttribute('style', 'border-width: 2px;color: white;')" 
+            onpointerleave="this.setAttribute('style', 'border-width: 2px;color: var(--pink);')" 
+            href="/donate/">Donate</a>
+          <a class="btn w-full btn-whatsapp" href="/whatsapp/">Join WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Heading -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="grid grid-2 items-center" style="gap:2rem;">
+          <div>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge badge-pink"></span>
+              <span class="badge"></span>
+            </div>
+
+            <h1 class="headline text-4xl md:text-6xl font-extrabold leading-tight mt-4">
+              Sukoon Community Wellbieng CIC
+            </h1>
+
+            <p class="mt-4 text-lg muted max-w-xl">
+              
+            </p>
+
+
+         
+      
+
+        <div>
+          <div class="font-semibold" style="color:var(--ink)">Contact</div>
+          <p class="mt-2">
+            Email: <a class="link" href="mailto:lokinstitute@gmail.com">info@sukoonwellbeing.org.uk</a><br/>
+            Phone: <a class="link" href="tel:+44123456789">+44 123456789</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-gold"></div>
+    <div class="container" style="padding-top:1rem; padding-bottom:1rem;">
+      <div class="text-xs muted">© <span id="year"></span> Sukoon Community Wellbeing CIC. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky actions (kept) -->
+  <div class="mobile-cta md:hidden">
+    <div class="tray">
+      <a href="https://chat.whatsapp.com" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp</a>
+      <a href="/donate/" class="btn btn-primary">Donate</a>
+    </div>
+  </div>
+
+  <script src="/static/js/main.js"></script>
+
+  
+</body>
+
+</html>
+
+
+
+
+
