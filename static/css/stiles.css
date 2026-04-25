@@ -252,7 +252,6 @@ h1,h2,h3,h4{
 }
 
 .service-card{
-  min-height:420px;
   padding:2rem;
   border-radius:2.2rem;
   text-decoration:none;
