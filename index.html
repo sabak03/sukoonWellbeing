@@ -4,229 +4,266 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sukoon Community Wellbeing CIC</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/css/stiles.css" />
 </head>
 
 <body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="brand" aria-label="Sukoon home">
+        <img
+          src="/static/images/logoLong.png"
+          alt="Sukoon Community Wellbeing CIC logo"
+          class="site-logo"
+        />
+      </a>
 
-<header class="site-header">
-    <div class="container nav-wrap">
-      <div class="flex items-center justify-between gap-4">
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu">
+        ☰
+      </button>
 
-        <a href="/" class="brand" aria-label="Sukoon home">
-          <img
-            src="/static/images/longSukoon.png"
-            alt="Sukoon Community Wellbeing CIC logo"
-            class="site-logo"
-          />
-        </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="/swimming">Swimming</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-        <nav class="hidden md:flex items-center gap-6 text-sm nav-links">
-          <a class="link" href="/about/">About Us</a>
-          <a class="link" href="/services/">Services</a>
-          <a class="link" href="/get-involved/">Get Involved</a>
-          <a class="link" href="/impact/">Impact</a>
-          <a class="link" href="/contact/">Contact</a>
-          <a class="btn btn-ghost btn-pill text-sm" href="/donate/">Support Us</a>
-        </nav>
+			<a href="/swimming" class="nav-button desktop-book-button">Book a Place</a>
 
-        <button
-          id="menuBtn"
-          class="md:hidden px-3 py-2 rounded-lg border"
-          style="border-color:var(--line)"
-          aria-label="Open menu"
-          aria-expanded="false"
-        >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
+    </div>
+  </nav>
 
-      </div>
+
+  <header class="home-header">
+
+		<div class="header-image-circle header-image-left reveal">
+			<img src="/static/images/spalshpoolHeader.jpg" alt="Women and children activity">
+		</div>
+
+		<div class="header-image-circle header-image-right">
+			<img src="/static/images/women.jpg" alt="Family community activity">
+		</div>
+  	<div class="home-header-content reveal">
+			<h1>Sukoon Community Wellbeing</h1>
+			<p class="reveal">
+				Creating opportunities for women, children and families to connect learn and thrive!
+			</p>
+			<p class="reveal" style="font-size: clamp(1rem, 1vw, 2.2rem); line-height: 1.35; font-weight: 200; color: var(--text-muted);">
+				A Community Interest Company (CIC) supporting wellbeing, friendship and inclusion 
+				across Coventry and surrounding areas.
+			</p>
+			
+		<div class="header-buttons">
+      <a href="/swimming" class="btn btn-ghost" style="margin-top: 70px;">JOIN SWIMMING NOW</a>
     </div>
 
-    <div class="divider-soft"></div>
-
-    <div id="mobileNav" class="md:hidden hidden mobile-drawer">
-      <div class="container py-4">
-        <div class="grid gap-3 text-sm">
-          <a class="py-2 link" href="/about/">About Us</a>
-          <a class="py-2 link" href="/services/">Services</a>
-          <a class="py-2 link" href="/get-involved/">Get Involved</a>
-          <a class="py-2 link" href="/impact/">Impact</a>
-          <a class="py-2 link" href="/contact/">Contact</a>
-          <a class="btn btn-ghost btn-pill text-sm" href="/donate/">Support Us</a>
-        </div>
-      </div>
-    </div>
+  	</div>
   </header>
 
-  <main>
 
-    <section class="hero-section">
-      <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <span class="eyebrow">Community • Wellbeing • Family</span>
-          <h1>Sukoon Community Wellbeing CIC</h1>
-          <p class="hero-subtitle">
-            Supporting women and families through affordable wellbeing activities,
-            safe community spaces, and meaningful connection.
-          </p>
-          <div class="hero-buttons">
-            <a href="/services/" class="btn btn-primary btn-pill">Explore Our Services</a>
-            <a href="/get-involved/" class="btn btn-light btn-pill">Get Involved</a>
-          </div>
-        </div>
+	<section id="activities">
+		<div class="section-container reveal" style="margin-bottom: 50px;">
+			<div class="section-heading">
+				<h2>Bright, fun and meaningful activities</h2>
+				<p>
+					Explore our community activities, events and support sessions.
+				</p>
+			</div>
 
-        <div class="hero-card reveal">
-          <p class="small-title">Our purpose</p>
-          <h2>Creating calm, connection and confidence.</h2>
-          <p>
-            Sukoon helps families feel less isolated by bringing people together
-            through swimming, cooking, social activities and supportive community events.
-          </p>
-        </div>
-      </div>
-    </section>
+			<div class="bulletin-board">
+				<a href="/swimming" class="board-note note-pink">
+					<span class="pin"></span>
+					<div class="note-icon">🤽🏽</div>
+					<h3>Swimming</h3>
+					<p>Private women and children swimming sessions.</p>
+				</a>
 
-    <section class="services-section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Our Services</span>
-          <h2>Activities that bring families together</h2>
-          <p>
-            Our sessions are designed to be warm, welcoming and accessible for women,
-            children and families in the community.
-          </p>
-        </div>
+				<a href="events.html" class="board-note note-green">
+					<span class="pin"></span>
+					<div class="note-icon">🎉</div>
+					<h3>Events</h3>
+					<p>Community events, fun sessions and seasonal activities.</p>
+				</a>
 
-        <div class="service-cards">
-          <a href="/services/swimming/" class="service-card reveal">
-            <h3>Swimming Sessions</h3>
-            <p>
-              Affordable women and family swimming sessions that support confidence,
-              movement and wellbeing.
-            </p>
-            <span>Learn more →</span>
-          </a>
+				<a href="family-days-out.html" class="board-note note-blue">
+					<span class="pin"></span>
+					<div class="note-icon">🌈</div>
+					<h3>Family Days Out</h3>
+					<p>Relaxed trips and family-friendly days out.</p>
+				</a>
 
-          <a href="/services/cooking/" class="service-card reveal">
-            <h3>Cooking Workshops</h3>
-            <p>
-              Simple savoury and sweet cooking sessions for mums and children to learn,
-              connect and enjoy food together.
-            </p>
-            <span>Learn more →</span>
-          </a>
+				<a href="wellbeing.html" class="board-note note-purple">
+					<span class="pin"></span>
+					<div class="note-icon">🌿</div>
+					<h3>Wellbeing</h3>
+					<p>Supportive activities to build confidence and connection.</p>
+				</a>
 
-          <a href="/services/events/" class="service-card reveal">
-            <h3>Community Events</h3>
-            <p>
-              Chai and chat, children’s activities, wellbeing days and family trips that
-              reduce isolation.
-            </p>
-            <span>Learn more →</span>
-          </a>
-        </div>
-        
-      </div>
-    </section>
+				<a href="workshops.html" class="board-note note-yellow">
+					<span class="pin"></span>
+					<div class="note-icon">🎨</div>
+					<h3>Workshops</h3>
+					<p>Creative, learning and wellbeing workshops.</p>
+				</a>
 
-    <section class="why-section">
-      <div class="container why-box reveal">
-        <span class="eyebrow">Why Sukoon?</span>
-        <h2>A safe space for women and families to feel supported</h2>
+				<a href="services.html" class="board-note note-orange">
+					<span class="pin"></span>
+					<div class="note-icon">➕</div>
+					<h3>More Coming Soon</h3>
+					<p>More activities and services will be added soon.</p>
+				</a>
+
+				<div class="board-button-area">
+					<a href="services.html" class="btn btn-primary">
+						View All Events & Services
+					</a>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+
+
+	<section class="about-parallax" id="about">
+		<div class="zigzag-top"></div>
+		<div class="about-parallax-overlay">
+			<div class="about-parallax-content">
+				<span class="section-label about-label">Helping families feel less alone</span>
+				<h2>
+					About Sukoon
+				</h2>
+				<p>
+					Sukoon Community Wellbeing CIC is a not-for-profit organisation created
+					to bring women and children together through fun, welcoming and
+					family-friendly activities.
+				</p>
+
+				<p>
+					We aim to reduce isolation, build confidence, create happy memories and
+					support families to feel connected within their community.
+				</p>
+
+				<a href="about.html" class="btn btn-secondary">
+					Learn More About Us
+				</a>
+
+			</div>
+		</div>
+		<div class="zigzag-bottom"></div>
+	</section>
+
+
+	<section class="reviews-section" id="reviews">
+		<div class="section-container">
+			<div class="section-heading">
+				<h2>What families are saying</h2>
+				<p>
+					Kind words from women and families who have joined our activities.
+				</p>
+			</div>
+
+			<div class="reviews-grid">
+
+				<article class="review-card review-pink">
+					<div class="review-stars">★★★★★</div>
+					<p>
+						“A lovely welcoming session. My children really enjoyed themselves and
+						it felt comfortable and safe.”
+					</p>
+					<div class="review-person">
+						<span class="review-avatar">A</span>
+						<div>
+							<h3>Anonymous Parent</h3>
+							<small>Swimming Session</small>
+						</div>
+					</div>
+				</article>
+
+				<article class="review-card review-green">
+					<div class="review-stars">★★★★★</div>
+					<p>
+						“It was so nice to have an activity where women and children could
+						relax, have fun and feel included.”
+					</p>
+					<div class="review-person">
+						<span class="review-avatar">M</span>
+						<div>
+							<h3>Mother Attendee</h3>
+							<small>Family Activity</small>
+						</div>
+					</div>
+				</article>
+
+				<article class="review-card review-blue">
+					<div class="review-stars">★★★★★</div>
+					<p>
+						“The children loved it. Everything was organised clearly and the
+						atmosphere was friendly.”
+					</p>
+					<div class="review-person">
+						<span class="review-avatar">F</span>
+						<div>
+							<h3>Family Review</h3>
+							<small>Community Event</small>
+						</div>
+					</div>
+				</article>
+
+			</div>
+			<!-- ADD LATER GOOGLE REVIEWS
+			<div class="reviews-bottom">
+				<a href="reviews.html" class="btn btn-secondary">
+					Read More Reviews
+				</a>
+			</div> -->
+
+		</div>
+	</section>
+
+
+
+  <section class="section contact-section" id="contact">
+    <div class="section-container">
+
+      <div class="section-heading">
+        <h2>Get in touch with Sukoon</h2>
         <p>
-          Sukoon Community Wellbeing CIC exists to make wellbeing activities more
-          accessible for families who may feel isolated, face financial barriers,
-          or need a welcoming space to connect with others. Through community-led
-          sessions, we aim to improve confidence, reduce loneliness and support
-          healthier family routines.
+          For bookings, questions or community support, please contact us.
         </p>
       </div>
-    </section>
 
-    <section class="impact-section">
-      <div class="container impact-grid">
-        <div class="impact-text reveal">
-          <span class="eyebrow">Our Impact</span>
-          <h2>Small sessions. Real difference.</h2>
-          <p>
-            Every activity creates an opportunity for families to leave the house,
-            meet others, build confidence and feel part of the community.
-          </p>
-        </div>
-
-        <div class="impact-stats reveal">
-          <div>
-            <strong>15+</strong>
-            <span>families per session</span>
-          </div>
-          <div>
-            <strong>3</strong>
-            <span>main activity areas</span>
-          </div>
-          <div>
-            <strong>1</strong>
-            <span>welcoming community</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="cta-section">
-      <div class="container cta-box reveal">
-        <h2>Get involved with Sukoon</h2>
-        <p>
-          Join a session, volunteer your time, or support our work so we can continue
-          offering affordable activities for women and families.
-        </p>
-
-        <div class="cta-buttons">
-          <a href="/services/" class="btn btn-primary btn-pill">Join</a>
-          <a href="/get-involved/" class="btn btn-light btn-pill">Volunteer</a>
-          <a href="/donate/" class="btn btn-ghost btn-pill">Support</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>Sukoon Community Wellbeing CIC</h3>
-        <p>Supporting women and families through wellbeing activities.</p>
-        <div class="text-xs muted">© <span id="year"></span> Sukoon Community Wellbeing CIC. All rights reserved.</div>
+      <div class="contact-card">
+        <p><strong>Email:</strong> info@sukoonwellbeing.org.uk</p>
+        <p><strong>Organisation:</strong> Sukoon Community Wellbeing CIC</p>
+        <p><strong>Focus:</strong> Women, children and family wellbeing activities</p>
       </div>
 
-      <div>
-        <h4>Contact</h4>
-          Email: <a class="link" href="mailto:info@sukoonwellbeing.org.uk">info@sukoonwellbeing.org.uk</a><br/>
-          Phone: <a class="link" href="tel:+44123456789">+44 123456789</a>
-      </div>
+    </div>
+  </section>
 
-      <div>
-        <h4>Follow</h4>
-        <p>
-          <a href="#">Instagram</a> ·
-          <a href="#">Facebook</a> ·
-          <a href="/whatsapp/">WhatsApp</a>
-        </p>
-      </div>
+  <footer class="footer">
+    <div class="footer-container">
+
+      <p>
+        © 2026 Sukoon Community Wellbeing CIC. All rights reserved.
+      </p>
+
+      <p>
+        A not-for-profit organisation supporting women, children and community wellbeing.
+      </p>
+
     </div>
   </footer>
-  
+
+
   <script src="/static/js/jarvis.js"></script>
+
 </body>
 </html>
