@@ -1,14 +1,8 @@
-const menuBtn = document.getElementById("menuBtn");
-const mobileNav = document.getElementById("mobileNav");
-
-if (menuBtn && mobileNav) {
-  menuBtn.addEventListener("click", () => {
-    mobileNav.classList.toggle("hidden");
-
-    const isOpen = !mobileNav.classList.contains("hidden");
-    menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
-  });
+function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active");
 }
+
 
 const revealElements = document.querySelectorAll(".reveal");
 
