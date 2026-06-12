@@ -989,7 +989,8 @@ body {
     padding: 30px 22px;
     border-radius: 28px;
     gap: 30px;
-    width: 98%;
+    width: 100%;
+    max-width: 100%;
     overflow: hidden;
   }
   .contact-text, .contact-details {
