@@ -863,6 +863,10 @@ body {
 }
 
 
+.footer-container {
+  background-color: #33243418;
+  padding: 5px 10px;
+}
 
 @media (max-width: 950px) {
   .bulletin-board {
