@@ -145,7 +145,7 @@ body {
   box-shadow: 0 5px 14px rgba(47, 168, 102, 0.25);
   transition: all 0.25s ease;
   justify-self: end;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .nav-button:hover {
