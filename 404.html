@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Sukoon Community Wellbeing</title>
+  <link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" 
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="/static/css/stiles.css" />
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--font-main);
+      background:
+        radial-gradient(circle at 15% 20%, var(--pink-light) 0%, transparent 28%),
+        radial-gradient(circle at 85% 25%, var(--blue-light) 0%, transparent 30%),
+        radial-gradient(circle at 50% 90%, var(--green-light) 0%, transparent 35%),
+        var(--bg-main);
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .error-page {
+      min-height: calc(100vh - 70px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .error-card {
+      max-width: 620px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.88);
+      border: 3px solid var(--green-light);
+      border-radius: 34px;
+      padding: 38px 26px;
+      box-shadow: 0 18px 45px rgba(47, 168, 102, 0.14);
+    }
+
+    .error-card h1 {
+      font-family: var(--font-fun);
+      font-size: clamp(4.5rem, 16vw, 8rem);
+      line-height: 0.9;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin: 0;
+    }
+
+    .error-card h2 {
+      font-family: var(--font-fun);
+      font-size: clamp(1.6rem, 4vw, 2.3rem);
+      color: var(--green-dark);
+      margin: 0 0 10px;
+    }
+
+    .error-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin: 8px 0;
+    }
+
+    .error-card strong {
+      color: var(--pink-dark);
+      font-weight: 800;
+    }
+
+    .loading-img {
+      max-width: 230px;
+      width: 70%;
+      margin: 22px auto 0;
+      display: block;
+      opacity: 0.95;
+    }
+
+    .home-link {
+      display: inline-block;
+      margin-top: 24px;
+      text-decoration: none;
+      background: var(--green);
+      color: var(--text-light);
+      padding: 13px 26px;
+      border-radius: var(--radius-large);
+      font-family: var(--font-fun);
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(47, 168, 102, 0.22);
+      transition: all 0.25s ease;
+    }
+
+    .home-link:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+    }
+
+    .error-footer {
+      text-align: center;
+      padding: 16px 20px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 4px solid transparent;
+      border-image: linear-gradient(
+        90deg,
+        var(--green),
+        var(--pink),
+        var(--blue),
+        var(--purple)
+      ) 1;
+      background: var(--bg-card);
+    }
+
+    @media (max-width: 600px) {
+      .error-card {
+        padding: 32px 20px;
+        border-radius: 28px;
+      }
+
+      .loading-img {
+        max-width: 190px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="error-page">
+    <div class="error-card">
+			<h3 style="color: var(--pink-dark);">OOPS!</h3>
+      <h1>404</h1>
+      <h2>Page not found</h2>
+
+      <p>Sorry, this page could not be found.</p>
+      <p>You will be redirected to the homepage in <strong id="countdown">10</strong> seconds.</p>
+
+      <img
+        src="/static/images/loading.gif"
+        alt="Loading illustration"
+        class="loading-img"
+      />
+      <a href="/" class="home-link">Go Back Home</a>
+
+    </div>
+  </main>
+
+  <footer class="error-footer">
+    © <span id="year"></span> Sukoon Community Wellbeing CIC
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    let seconds = 10;
+    const countdown = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+      seconds--;
+      countdown.textContent = seconds;
+
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = "/";
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
