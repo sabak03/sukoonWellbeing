@@ -20,7 +20,6 @@
   z-index: 2;
 }
 
-
 .donate-title {
   font-family: var(--font-fun);
   font-size: clamp(4.2rem, 14vw, 10rem);
@@ -213,6 +212,59 @@
 }
 
 
+.money-notes-grid {
+  max-width: 90%;
+  margin: 45px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+}
+
+.money-note {
+  min-height: 260px;
+  padding: 38px 26px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text-main);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 12px 22px rgba(48, 31, 12, 0.14);
+  transition: all 0.25s ease;
+}
+
+.money-note:nth-child(1) {
+  transform: rotate(-2deg);
+}
+.money-note:nth-child(2) {
+  transform: rotate(1.5deg);
+}
+.money-note:nth-child(3) {
+  transform: rotate(-1deg);
+}
+.money-note:hover {
+  transform: translateY(-8px) rotate(0deg) scale(1.03);
+  box-shadow: 0 20px 32px rgba(48, 31, 12, 0.22);
+}
+
+.money-note-icon {
+  width: 95px;
+  height: 95px;
+  object-fit: contain;
+  margin-bottom: 22px;
+}
+
+.money-note h3 {
+  font-family: var(--font-main);
+  font-size: clamp(1.35rem, 3vw, 1.25rem);
+  line-height: 1.15;
+  color: var(--green-dark);
+  margin: 0;
+}
+
 
 
 @media (max-width: 850px) {
@@ -254,9 +306,9 @@
     right: 8%;
     bottom: 8%;
   }
-  
+
   .donation-details {
-    padding: 70px 16px;
+    padding: 0px 16px;
   }
   .donation-card {
     padding: 32px 20px;
@@ -280,5 +332,25 @@
   .donation-note {
     font-size: 0.95rem;
     padding: 16px;
+  }
+  .donation-card::before {
+    font-size: 5rem;
+  }
+
+  .money-notes-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    max-width: 420px;
+  }
+  .money-note {
+    min-height: 230px;
+    padding: 36px 22px 28px;
+  }
+  .money-note-icon {
+    width: 82px;
+    height: 82px;
+  }
+  .money-note h3 {
+    font-size: 1.2rem;
   }
 }
