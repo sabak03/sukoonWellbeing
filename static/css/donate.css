@@ -340,7 +340,7 @@
   .money-notes-grid {
     grid-template-columns: 1fr;
     gap: 26px;
-    max-width: 420px;
+    max-width: 90%;
   }
   .money-note {
     min-height: 230px;
