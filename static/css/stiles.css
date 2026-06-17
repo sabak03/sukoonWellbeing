@@ -887,8 +887,11 @@ body {
   .menu-toggle {
     display: block;
     justify-self: end;
+    font-size: 1.5rem;
   }
-
+  .brand {
+    width: 60%;
+  }
   .nav-links {
     position: absolute;
     top: 78px;
