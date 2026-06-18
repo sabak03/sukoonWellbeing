@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | Sukoon Community Wellbeing CIC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/stiles.css" />
+  <link rel="stylesheet" href="/static/css/devents.css" />
+  <link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="brand" aria-label="Sukoon home">
+        <img
+          src="/static/images/logoLong.png"
+          alt="Sukoon Community Wellbeing CIC logo"
+          class="site-logo"
+        />
+      </a>
+
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu">
+        ☰
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="/events">Events (comming soon)</a></li>
+        <li><a href="#contact">Contact</a></li>
+		    <a href="/donate" class="nav-button desktop-book-button">Donate</a>
+      </ul>
+    </div>
+  </nav>
+
+
+	<section class="events-page-section">
+		<div class="section-container">
+			<div class="section-heading reveal">
+				<span class="heading-bubble bubble-left"></span>
+				<span class="heading-bubble bubble-right"></span>
+				<h2>Upcoming Sukoon Events</h2>
+				<p>
+					Swipe or use the arrows to explore our upcoming activities.
+				</p>
+			</div>
+
+			<div class="events-board">
+				<button class="carousel-btn carousel-prev" onclick="scrollEvents(-1)" aria-label="Previous event">
+					<p style="color: var(--text-light);font-size: 2rem;font-family: var(--font-fun);margin-top: -5px;">‹</p>
+				</button>
+
+				<div class="events-carousel" id="eventsCarousel">
+
+					<article class="event-slide">
+						<span class="pin"></span>
+						<div class="event-poster-wrap">
+							<img
+								src="/static/images/posters/swimming.png"
+								alt="Sukoon swimming poster"
+								class="event-poster"/>					
+						</div>
+						<div class="event-info">
+							<h3>Women & Children Swimming</h3>
+							<p>
+								A private, welcoming splash pool session for women and children to relax,
+								have fun and enjoy time together.
+							</p>
+							<a
+								href="https://forms.gle/mEo4eAWvjhBXeJfG6"
+								target="_blank"
+								rel="noopener"
+								class="btn btn-ghost">
+								Register Here
+							</a>
+							<a
+								href="https://chat.whatsapp.com/IkFESyINMjPIHtUyobxnMd"
+								class="btn btn-primary" style="margin-left: 10px;">
+								Join WhatsApp
+							</a>
+						</div>
+					</article>
+
+					<article class="event-slide">
+						<span class="pin"></span>
+						<div class="event-poster-wrap">
+							<img
+								src="/static/images/posters/park.jpg"
+								alt="Sukoon picnic event poster"
+								class="event-poster"/>
+						</div>
+						<div class="event-info">
+							<h3>Picnic in the Park</h3>
+							<p>
+								A fun family-friendly day out, bring a dish and share the joy ◡̈
+							</p>
+							<a
+								href="https://chat.whatsapp.com/IWopEyVfu1S2U0SfAOL1C3?s=cl&p=i&ilr=0"
+								class="btn btn-primary">
+								Join the group
+							</a>
+						</div>
+					</article>
+
+					<article class="event-slide">
+						<span class="pin"></span>
+						<div class="event-poster-wrap">
+							<img
+								src="/static/images/posters/tabletop.png"
+								alt="Sukoon car boot event poster"
+								class="event-poster"/>
+						</div>
+						<div class="event-info">
+							<h3>Coming Soon</h3>
+							<p>
+								Register your interest in setting up a stall at our table top sale!
+							</p>
+							<a
+								href="https://forms.gle/WuxHndYfyL21HAbL7"
+								target="_blank"
+								rel="noopener"
+								class="btn btn-secondary">
+								Register Here
+							</a>
+						</div>
+					</article>
+
+				</div>
+
+				<button class="carousel-btn carousel-next" onclick="scrollEvents(1)" aria-label="Next event">
+					<p style="color: var(--text-light);font-size: 2rem;font-family: var(--font-fun);margin-top: -5px;">›</p>
+				</button>
+			</div>
+		</div>
+	</section>
+
+  
+    <footer class="footer">
+      <div class="footer-container">
+        <p>© 2026 Sukoon Community Wellbeing CIC. All rights reserved.</p>
+        <p>A non profit organisation (17155028) supporting women, children and community wellbeing.</p>
+      </div>
+    </footer>
+  
+    <script src="/static/js/jarvis.js"></script>
+  
+</body>
+</html>
+
+
