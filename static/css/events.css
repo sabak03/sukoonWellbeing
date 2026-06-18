@@ -216,7 +216,7 @@
     font-size: 1.35rem;
   }
   .event-info p {
-    font-size: 0.9rem;
+    display: none;
   }
   .carousel-btn {
     display: none;
@@ -236,5 +236,10 @@
   }
   .pin{
     margin-top: -20px;
+  }
+
+  .btn-ghost {
+    margin-bottom: 10px;
+    margin-right: 0px;
   }
 }
