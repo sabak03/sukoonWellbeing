@@ -28,3 +28,19 @@ const revealOnScroll = () => {
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
+
+
+function scrollEvents(direction) {
+  const carousel = document.getElementById("eventsCarousel");
+  const slide = carousel.querySelector(".event-slide");
+
+  if (!slide) return;
+
+  const gap = 28;
+  const scrollAmount = slide.offsetWidth + gap;
+
+  carousel.scrollBy({
+    left: direction * scrollAmount,
+    behavior: "smooth"
+  });
+}
