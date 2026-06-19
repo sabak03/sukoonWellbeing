@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Sukoon Community Wellbeing CIC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/stiles.css" />
+  <link rel="stylesheet" href="/static/css/contact.css" />
+  <link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="brand" aria-label="Sukoon home">
+        <img
+          src="/static/images/logoLong.png"
+          alt="Sukoon Community Wellbeing CIC logo"
+          class="site-logo"
+        />
+      </a>
+
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu">
+        ☰
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/events">Activities & Events</a></li>
+        <li><a href="/contact">Contact</a></li>
+		    <a href="/donate" class="nav-button desktop-book-button">Donate</a>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="contact-header">
+    <div class="contact-header-content">
+      <h1>Get in Touch</h1>
+      <p>
+        We would love to hear from you. Contact us about bookings, activities,
+        donations or community support.
+      </p>
+    </div>
+    <span class="contact-bubble bubble-one"></span>
+    <span class="contact-bubble bubble-two"></span>
+    <span class="contact-bubble bubble-three"></span>
+  </header>
+
+
+	<section class="contact-page-details">
+		<div class="contact-details-wrap">
+			<div class="contact-detail">
+				<div class="contact-icon-soft">✉️</div>
+				<span class="contact-detail-label">Email Us</span>
+				<a href="mailto:info@sukoonwellbeing.org.uk">
+					info@sukoonwellbeing.org.uk
+				</a>
+			</div>
+
+			<div class="contact-detail">
+				<div class="contact-icon-soft">📞</div>
+				<span class="contact-detail-label">Call Us</span>
+				<a href="tel:00000000000">
+					00000 000000
+				</a>
+			</div>
+
+			<div class="contact-detail">
+				<div class="contact-icon-soft">📍</div>
+				<span class="contact-detail-label">Find Us</span>
+				<p>
+					Minhas Plaza 520-548 Foleshill Road,
+				</p>
+				<br><p>Coventry CV6 5HP</p>
+			</div>
+		</div>
+	</section>
+
+
+  <section class="map-section">
+    <div class="section-heading">
+      <span class="section-label">Find Us</span>
+      <h2>Our Location</h2>
+      <p>
+        Our activities take place across community spaces and venues. Please
+        check each event for the exact location.
+      </p>
+    </div>
+
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps?q=Coventry%20United%20Kingdom&output=embed"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <p>© 2026 Sukoon Community Wellbeing CIC. All rights reserved.</p>
+      <p>A non profit organisation (17155028) supporting women, children and community wellbeing.</p>
+    </div>
+  </footer>
+  
+  <script src="/static/js/jarvis.js"></script>
+  
+</body>
+</html>
